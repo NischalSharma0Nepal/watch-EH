@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn To Hack</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(
+          130deg,
+          rgb(230, 124, 71),
+          rgb(197, 166, 62)
+        );
+        height: 800px;
+      }
+      .hdlg {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .hdlg > img {
+        width: 22vw;
+        height: 29vh;
+        border-radius: 15px;
+        margin-top: 8px;
+      }
+      .slg {
+        display: flex;
+        justify-content: center;
+        font-family: "Teko", sans-serif;
+        font-size: 20px;
+      }
+      .brd {
+        display: flex;
+        border: 2px solid rgb(98, 96, 96);
+        width: 39%;
+        margin: 10px auto;
+        justify-content: center;
+      }
+      .cont {
+        display: flex;
+        background-color: rgba(221, 207, 173, 0.505);
+        width: 96%;
+        height: 81%;
+        margin: 25px auto;
+        padding-top: 10px;
+        border-radius: 10px;
+        text-align: center;
+        border: 5px solid white;
+      }
+
+      #thmb {
+        width: 36vw;
+        height: 36vh;
+        object-fit: fill;
+      }
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(61, 61, 61);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgb(22, 66, 102);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:active {
+        background: rgb(7, 54, 92);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgb(15, 117, 201);
+      }
+      .box {
+        overflow: hidden;
+        box-shadow: 3px 4px 20px #949ea1;
+        background: rgb(39, 82, 148);
+        border-radius: 0.5rem;
+        width: 30vw;
+        height: 44vh;
+        margin: 2rem;
+        transition: 250ms all ease-in-out;
+        cursor: pointer;
+      }
+      .box > span {
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        font-weight: bold;
+      }
+
+      .box:hover {
+        transform: scale(1.07);
+        box-shadow: 4px 3px 45px #7f8b8f;
+        text-transform: uppercase;
+        font-size: 19px;
+      }
+      footer {
+        background-color: rgb(104, 99, 25);
+        color: black;
+        height: 16vh;
+        font-size: 17px;
+        margin-top: 2px;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 17px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      @media screen and (max-width: 500px) {
+        .hdlg > img {
+          width: 49vw;
+          height: 21vh;
+        }
+        .slg {
+          font-size: 24px;
+        }
+        #thmb {
+          width: 66vw;
+          height: 33vh;
+        }
+        .box {
+          width: 70vw;
+          height: 50vh;
+          font-size: 17px;
+        }
+        .box:hover {
+          height: 67vh;
+          font-size: 18px;
+        }
+        .cont {
+          margin: 4px auto;
+        }
+
+        .brd {
+          width: 45%;
+        }
+      }
+    </style>
+    <body>
+      <div class="hdlg">
+        <img src="log.png" />
+      </div>
+      <span class="slg"><h2>Just Learn</h2></span>
+      <span class="brd"> </span>
+      <div class="cont">
+        <div class="box">
+          <a href="watchcourse.html">
+            <img id="thmb" src="this.png" />
+          </a>
+          <span
+            >Learn Ethical Hacking From Scratch [Begniners] Udemy course</span
+          >
+        </div>
+      </div>
+      <footer>
+        Copyright &copy; Learn To Hack 2023<br /><br />
+        All Rights Reserved<br />Created By: Nischal Sharma
+      </footer>
+    </body>
+  </body>
+</html>

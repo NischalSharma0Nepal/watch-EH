@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn To Hack - Just Learn</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: linear-gradient(
+          90deg,
+          rgb(230, 124, 71),
+          rgb(197, 166, 62)
+        );
+        height: 900px;
+      }
+      .hdlg {
+        display: flex;
+        justify-content: center;
+      }
+
+      .hdlg > img {
+        width: 22vw;
+        height: 29vh;
+        border-radius: 15px;
+        margin-top: 8px;
+      }
+      .slg {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+      }
+      .brd {
+        display: flex;
+        border: 2px solid rgb(98, 96, 96);
+        width: 39%;
+        margin: 10px auto;
+        justify-content: center;
+      }
+      .cont {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(221, 207, 173, 0.605);
+        width: 98%;
+        height: 92%;
+        margin: 20px auto;
+        padding: 5px;
+        border-radius: 10px;
+        border: 4px solid white;
+        overflow: hidden;
+      }
+
+      #vid-player {
+        width: 65%;
+        height: 64%;
+        margin: 10px auto;
+      }
+      video[poster] {
+        object-fit: fill;
+      }
+      .prtd {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        border-radius: 8px;
+        border-width: 8px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-spacing: 15px;
+      }
+      .brdun{
+        display:flex;
+        width: 60%;
+        margin: 5px auto;
+        justify-content: center;
+        border-radius: 10px;
+        border: 5px solid rgb(13, 133, 133);
+      }
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(61, 61, 61);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgb(22, 66, 102);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:active {
+        background: rgb(7, 54, 92);
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgb(15, 117, 201);
+      }
+      .alnk {
+        display: block;
+        width: 60%;
+        height: 22px;
+        margin: 23px auto;
+        padding: 18px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 15px;
+        font-size: 21px;
+        background-color: #7ba758;
+      }
+      .alnk:hover {
+        font-size: 22px;
+        background-color: #599627;
+        font-weight: 350;
+        text-decoration: underline;
+        transform: scale(1);
+      }
+      #mr {
+        display: block;
+        width: 65%;
+        height: 21px;
+        margin: 5px auto;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 18px;
+        background-color: #7ba758;
+        cursor: pointer;
+      }
+      #mr:hover {
+        background-color: #599627;
+        font-weight: bold;
+        font-size: 19px;
+        text-decoration: underline;
+        transform: scale(1);
+      }
+      footer {
+        background-color: rgb(104, 99, 25);
+        color: black;
+        height: 14vh;
+        font-size: 17px;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 17px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      @media screen and (max-width: 500px) {
+        .hdlg > img {
+          width: 46vw;
+          height: 21vh;
+        }
+        #vid-player {
+          width: 84vw;
+          height: 41vh;
+        }
+        .slg {
+          font-size: 28px;
+        }
+        .cont {
+          height: 99%;
+          margin: 4px auto;
+        }
+        .prtd {
+          margin: 2px auto;
+          width: 80%;
+        }
+        .alnk {
+          width:58%;
+          height: 20px;
+        }
+        #mr {
+          width: 57%;
+          height: 45px;
+        }
+        footer {
+          height: 21vh;
+        }
+        .brd {
+          width: 46%;
+          left: 28%;
+        }
+        #download-options {
+          height: 40vh;
+        }
+        .brdun{
+          width: 74%;
+        }
+        .lin {
+        width: 67%;
+        height: 54px;
+        margin: 9px auto;
+        padding: 5px;
+      }
+      .lin > a {
+        font-weight: bold;
+        font-size: 12px;
+        color: #475018;
+        text-decoration: none;
+      }
+      }
+      #download-options {
+        display: flex;
+        margin: 4px auto;
+      }
+      .lin {
+        background-color: antiquewhite;
+        width: 67%;
+        height: 48px;
+        border-radius: 8px;
+        margin: 12px auto;
+        padding: 7px;
+      }
+      .lin > a {
+        font-weight: bold;
+        font-size: 1px;
+        color: #475018;
+        text-decoration: none;
+      }
+      .lin:hover {
+        transform: scale(1.00);
+        box-shadow: 3px 2px 40px #7f8b8f;
+        font-size: 13px;
+      }
+    </style>
+    <div class="hdlg">
+      <img src="log.png" />
+    </div>
+    <span class="slg"><h2>Just Learn</h2></span>
+
+    <span class="brd"> </span>
+
+    <div class="cont">
+      <video id="vid-player" controls poster="this.png">
+        <source src="vidscrs\1.mp4" type="video/mp4" />
+      </video>
+      <span class="brdun"> </span>
+      <div class="prtd">
+      </div>
+      <span class="brdun"> </span>
+      <span id="mr"><i class="fa-solid fa-download"></i> &nbsp; Download This Course</span>
+      <div id="download-options">
+        <ul id="ulo">
+          <li class="lin"><a href="#">Download the Video of This Course</a></li>
+          <li class="lin">
+            <a href="#">Download the course with Videos,Pdf and more</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      Copyright &copy; Learn To Hack 2023 <br /><br />
+      All Rights Reserved <br />
+      Created By: Nischal Sharma
+    </footer>
+
+    <script>
+      const linkContainer = document.querySelector(".prtd");
+      const numVideos = 145;
+
+      for (let i = 1; i <= numVideos; i++) {
+        const link = document.createElement("a");
+        link.className = "alnk";
+        link.setAttribute("data-src", `vidscrs/${i}.mp4`);
+        link.textContent = `Part ${i}`;
+        linkContainer.appendChild(link);
+      }
+      var partLinks = document.querySelectorAll(".alnk");
+      var videoPlayer = document.getElementById("vid-player");
+      var currentPartIndex = 0;
+      var parts = [];
+
+      partLinks.forEach(function (partLink) {
+        parts.push(partLink.getAttribute("data-src"));
+        partLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          currentPartIndex = parts.indexOf(partLink.getAttribute("data-src"));
+          videoPlayer.setAttribute("src", parts[currentPartIndex]);
+          videoPlayer.play();
+        });
+      });
+
+      videoPlayer.addEventListener("ended", function () {
+        setTimeout(function () {
+          currentPartIndex++;
+          if (currentPartIndex < parts.length) {
+            videoPlayer.setAttribute("src", parts[currentPartIndex]);
+            videoPlayer.play();
+          }
+        }, 5000);
+      });
+
+      const mrElement = document.getElementById("mr");
+
+      const downloadOptions = document.getElementById("download-options");
+      downloadOptions.style.display = "none";
+
+      $("#mr").click(function () {
+        $(".trant").toggleClass("trant-active");
+      });
+      // Create a click event listener on the "Download This Course" element
+
+      mrElement.addEventListener("click", function () {
+        // Toggle the "download-options" element on/off
+
+        if (downloadOptions.style.display === "none") {
+          downloadOptions.style.display = "block";
+        } else {
+          downloadOptions.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
